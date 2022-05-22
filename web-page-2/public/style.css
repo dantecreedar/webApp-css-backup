@@ -1,0 +1,119 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+} 
+
+body{
+    background-image: linear-gradient(to left, #448dfb, #a26fe6, #d945b7, #f20677, #eb1230);
+}
+
+.logo{
+    width: 98vw;
+    height: 8vh;
+    background:#448dfb;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 0 2px #fff;
+    text-align: center;
+    
+}
+span{
+    color:#d945b7;
+}
+
+ul{
+    position: fixed;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0 0 20px;
+    border: 2px inset #fff;
+    animation-name: cambio_decolor;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio_decolor{
+    0% {background-color: #ebd9ff;}
+    25% {background-color: #fd8ee3;}
+    50% {background-color: #d945b7;}
+    75% {background-color: #fd8ee3;}
+    100% {background-color: #ebd9ff;}
+}
+
+li{
+    display: inline-block;
+    background: #d945b7;
+    padding: 10px;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px  2px #fff;
+    
+}
+li:hover{
+    background: #fff;
+}
+a:hover{
+    color:#d945b7;
+    transition: color 0.2s;
+}
+
+/*sector main*/
+section{
+    background:#ec86d4;
+    margin-top: 75px;
+    padding: 5px;
+    height: 23vw;
+}
+section:hover{
+    background-image: linear-gradient(to left, #ff4dbc, #ee43af, #de39a3, #ce2f96, #be258a);
+    transition: all 0.2;
+}
+img{
+    width: 25vw;
+    padding: 5px;
+    margin: 10px;
+    margin-left: 70px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    
+}
+img:hover{
+    width: 27vw; 
+    transition: all 0.2s;
+    box-shadow: 0 5px 5px 2px #fff;
+}
+
+h3{
+    display: inline-block;
+    background:#e8adf2;
+    padding: 10px;
+    margin-top: 20px;
+    width: 20vw;  
+    position: relative;
+    left: 30vw;
+    border: 1px dashed #fff;
+}
+h3:hover{
+    background:#d945b7;
+}
+
+/*Footer*/
+h1{
+    text-align: center;
+  
+}
+h4{
+    text-align: center;
+    
+}
+
