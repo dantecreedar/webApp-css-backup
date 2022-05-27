@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web-app-FlexBox</title>
+    <link rel="stylesheet" href="style.css">
+     <!--Font Aweson-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!--respnsign-->
+    <header>
+        <nav>
+            <ul class = "nav_ul">
+                <li class="nav_li"> <i class="fas fa-home"></i><a href="#">Home</a></li>
+                <li class="nav_li"> <i class="fas fa-user-friends"></i><a href="#">Menu</a></li>
+                <li class="nav_li"> <i class="fas fa-dollar-sign"></i><a href="#">From</a></li>
+                <li class="nav_li"> <i class="fas fa-question-circle"></i><a href="#">Contact</a></li>
+            </ul>
+            <div  class="nav_responsive-button-container">
+                <div id = "boton" class="nav_responsive-button fas fa-bars" onclick="motrarBars"></div>
+            </div>
+            <ul id = "nav_responsive" class = "nav_responsive-ul">
+                <li class="nav_responsive-li"><a href="#">Home</a></li>
+                <li class="nav_responsive-li"><a href="#">Menu</a></li>
+                <li class="nav_responsive-li"><a href="#">From</a></li>
+                <li class="nav_responsive-li"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+     <!--Js Boostrap-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+     <script src="./src/js/navbars.js"></script>
+</body>
+</html>

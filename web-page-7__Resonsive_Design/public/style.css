@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+background: #000;
+color: #fff;
+}
+
+/*display*/
+.navbar_li{
+    display: block;
+    background: #eee;
+}
+/*listas y a*/
+.lista_bts{
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+    background: #40f;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+/*hover interaction*/
+.lista_bts:hover{
+    background: rgb(198, 188, 226);
+    transition: all .2s;
+}
+a:hover{
+    color: #000;
+}
+
+/*responsive*/
+
+@media only screen and (max-width: 600px){
+    .lista_bts{
+        display: block;
+        margin: 2px;
+        width: 25%;
+    }
+}
+
