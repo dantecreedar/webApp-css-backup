@@ -84,9 +84,10 @@ footer{
     background: #fff;
 }
 
-@media(max-width:600px){
+@media(max-width:300px){
     section{
         width: 100%;
+        font-size: 50px;
     }
     .li-items{
         background: #fff;

@@ -1,0 +1,21 @@
+*{
+background: radial-gradient(circle, #fff, #bbb);
+}
+
+.container-grid{
+   display: grid;
+   grid-template-columns: 1 auto;
+}
+
+.items-grid{
+    background: yellowgreen;
+    border: 1px solid black;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.items-grid2{
+    background: #f00;
+    border: 1px solid black;
+}

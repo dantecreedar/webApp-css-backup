@@ -1,0 +1,82 @@
+HTML
+<!--HTML-->
+
+- Index -> principal las pagnas estan configurados para agarrar primero.
+	-Etiqueta
+		-ejemplo
+		-<etiqueta atributo = "valor"></etiqueta> -->Objeto 
+etiquetas de titulo:
+	-h1, h2, h3, h4, h5, h6
+etiqueta de parrafo:
+	-p
+
+etiquetas de salto de linea:
+	-br
+etiqueta de linea:
+	-hr 
+Etiquetas negrita:
+	-b
+etiqueta de italica:
+	-i
+etiqueta de tachada:
+	-strike
+etiqueta chiquita:
+	-small
+etiqueta de redirecconar:
+	-a
+etiqueta imagen
+	-img src ="" alt = "" controls ->para el control, el alt es ecencial para el SEO
+
+etiqueta sonido
+	-audio src = "" controls ->para el control
+
+etiquetas div
+	-div para todo, contenedores para etiquetas para clases y id
+ 
+formularios
+	-form
+	-input type = "" name""
+tipos de TYPE:
+	-type = "text" -> texto
+	-type = "password" -> contraseña
+	-type = "number" -> numeros
+	-type = "email" -> email
+	-type = "color" -> color
+	-type = "range" -> rango -> ejemplo de uso: type = "range" min = "1" max = "100"
+	-type = "date" -> fecha
+	-type = "time" -> hora
+	-type = "button" -> formas de usarse correcto: type = "button" value = "boton" -> el value es lo que devolvera la propiedad boton
+	-type = "submit" -> enviar datos
+	
+	REQUIRE: 
+		-type = "text" require = "" -> obliga al usuario a introducir sus condiciones
+etiqueta textarea
+	-textarea -> campo de escritura se puede modificar tamañano 
+	-textarea -> <textarea readonly></textarea>	 -> bloquea la escritura del campo, solo me deja ver
+
+ Que propiedad captan los input?
+	-value  devuelve el dato ingresado
+
+ METADATOS
+	etiqueta meta
+	- meta -> <meta charset = "utf-8"
+Tipos de meta:
+	-meta -> <meta name = "keywors" content = "harina, leche, huevo, galleta" -> esto afecta y te posiciona en el SEO el buscador  
+		-meta name = "tipo" content".
+	-meta -> <meta name = "description" content = "alimentos  S.A Es una compania destinada a brindar los mejores alimentos de calidad tiempo 
+			y forma".
+	-meta -> <meta name = "copyright" content = "brian galli">
+	-meta -> <meta name = "robot" content = "index"/o "noindex" esto es para ocular o mostrar la informacion de tu pagina
+
+HTML SEMATICO
+	-padre:header -> hijo:nav 
+	-padre:article -> hijo:section
+	-aside
+	-pie de pagina:footer
+
+TABLAS /// table -> tr -> td 
+	-table -> Inicia
+	-tr -> Filas
+	-td ->	Campos por filas
+etiqueta center:
+	-center -> centra los elementos -> no recomendado

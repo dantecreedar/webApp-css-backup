@@ -1,0 +1,361 @@
+ CSS
+
+<--CSS-->
+CSS SELECTORES
+ - Universal - *
+ - de tipo:
+ - Clases - .laClase 
+ - ID - #elId
+ - POR ATRIBUTO - [ atributo = "propiedad" ]
+ - DECENDIENTES - ejmplo h1 p
+ - PSEUDO-CLASES - ejemplo - h1:hover 
+
+ Espesificidad
+	- !important
+	- Estilo en Linea -> no se recomienda
+	- Identificadores
+	- Clases, pseudo-clases, atributos
+	- Elementos, pseudo-elementos
+
+
+ Metodologia BEM
+	Clasificar las clases:
+	ej:
+	- class = "contact-form__input"
+	- class = "contact-form__input--active" elemento diferente de haber mismas clases
+
+	ejemplo: 
+		<div class = "contact-form" ///seccion
+			<p class = "contact-form__p"		//seccion
+				<h2 class = "contact-form__p-h2"></h2>		//seccion
+			</p>
+		</div> ///Bloque
+ UNIDADES
+	- medidas fijas: cm, mm, pt, px
+	- medidas relativas: em
+				ej: 1em = 16px;
+
+	- 1 em es igual al valor  que le demos al valor de antes o el valor de arriba.
+
+	- medida vw y vh. ej: 100vw y 100vh
+		vw= 100 ancho de la pantalla total sin %
+		vh = 100 largo de la pantalla total sin%
+
+ PROPIEDADES DE TEXTO
+	-font-size: 2em; -> tamaño
+	-font-family: geogia; -> tipografia
+	-font-height: 1; -> tamaño de espaco acia abajo y arriba // la letra ocupa mas espacio
+	-font-weight: 900; -> Grosor de letra
+
+
+
+ NORMALIZE -> Reinicia los estilos 
+
+ ELEMENTOS BLOCKE Y ELEMENTOS LINEA
+	- Los elementos en blocke son todo lo que ocupa en bloque hasta final de pagina como h1,h2,p, etc
+	- Los elementos en linea son todos aquellos cuyo bloaques se limitan sierta longitud como un b
+ Como convertir de un elemento en bloque a elemento en linea:
+	DISPLAY
+	- { display: inline; 
+	    display: inline-block; -> se comporta como un elemento en linea pero adquiere la propiedad de  eun elemento en bloque }
+ 
+MODELO DE CAJA: -> BOX-MODEL
+	- CONTENT -> line-height
+	- PADDING -> padding
+	- BORDER -> bor der
+	- MARGIN -> margin
+
+ PROPIEDADES DE CAJA:
+	- background-color: #fff; -> Cambia los colores de fondo
+	- display: inline-block;
+	- padding: 10px; -> Distancia entre el texto y los bordes de la caja -> sus propiedades pueden ser
+				padding-top, padding-left, padding-right, padding-button; -> Shorthand Propety o propiedad acortada
+				padding: 20px(top) 20px(right) 30px(button) 30x(left);
+ 	- width: 100px; -> Ancho total
+	- height: 100px; -> Largo total
+	- box-sizig: border-box -> Relleno y borde en el ancho y alto del elemento
+	- margin: 20px; -> Distancia que existe entre las cajas -> sus propiedades son
+				margin-top, marging-left, margin-right,margin-button;
+				margin: 20px(top) 20px(right) 30px(button) 30px(left);
+	- border-radius: 15px; -> Redondear bordes
+       - border: 10px solid black; -> propedad acortada; 
+ 	- box-shadow: 2px 4px 15px 0 #000; -> nos da sombra a la caja -> sus propiedades son;
+				 		  box-shadow: 2px(eje x) 4px (eje y) 15px (nivel de desenfoque) 0(tamaño) #000(color);
+	- text-shadow: 2px 2px  7px #fff; -> sombra de texto -> sus propiedades son;
+					   text-shadow: 2px(eje x) 2px(eje y) 7px(desenfque) #fff; 
+	- tranform: rotate(45deg); -> nos permite editar propiedades de rotacion en grados (deg);
+
+ TIPS
+	- margin: auto; -> me centra los elementos;
+	- box-sizing: border-box; -> ocupa un espacioen el elemento;
+	- box-sizing: content-box; -> aparte de los pixeles agregados agregar el duplicado sin quitarme espacio al elemento no me ocupa lugar 
+						del elemento interno;
+
+ Outline -> Shorthand Propety o propiedad acortada
+	- outline: 10px solid red; -> marca el objeto sin modificar ni ocupar espacio en el objeto -> no se cuenta como parte de la caja;
+
+ POSITION: -> este afectara el flujo de html
+	- position: static; -> no esta posicionado, por defecto;
+	- position: relative; -> esta posicionada, el espacio se seguira conservando, ya que movera el elemento desde donde se encuentra; las propedades
+					de top y left dentro del mismo son las mas importantes; -> aparte iene la propiedad e z-index;
+	- position: absolute; -> el espacio nose concerva a difernecia de position relative las coordinadas se moveran por el viewport -> el contenedo 
+					se ajusta el tamaño de la caja al contendo
+	- position: fixed; -> es igual a absolute con la diferencia que queda fijado en un lugar.(suele usarse para menus o publicidad en scroll)
+	- position: sticky; -> mantiene el espacio que reserva en la pagina como el relative, pero nos define hasta en que momento de la pagina va a estar 
+				fijo en el contenedor, es una mezcla de relative y fixed;
+ Z-INDEX: -> indica el orden de un elemento posicionado y sus descendientes.//Solo en los elementos posicionados tiene conflictos de hijos y padres
+ 	- z-index: 50; -> Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.
+
+PROPIEDAD DISPLAY -> Formalmente la propiedad display establece los tipos de visualización interna y externa de un elemento
+	- display -> modifica el comportamiento de las cajas y sus relaciones
+
+	- display: block;
+	- display: inline; -> no se pueden modificar las resoluciones
+	- display: inline-block; -> podemos darle un ancho y alto -> podemos modificar la dimencion de la caja -> permite un elemento al lado e otro
+
+/////// -> las que no se usan tanto
+	- display: table;
+	- display: inline-table;
+	- display: list-item;
+	- display: table-cell;
+	- display: table-row;
+	- display: table-column;
+
+
+ OVERFLOW -> scroll ->a propiedad CSS overflow  especifica: si recortar contenido, 
+			dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque
+	- overflow: visible; -> Valor por defecto. El contenido no es recortado, podría ser dibujado fuera de la caja contenedora
+	- overflow: hidden; -> El contenido es recortado y no se muestran barras de posición
+	- overflow: scroll; -> nos coloca el scroll aunque no sea necesario
+	- overflow: auto; -> nos permite scrolear el texto dentro de la caja al detectar de ser necesario; -> es un Shorthand Propety
+
+////// -> tipss 
+ FLOAT: (Left, Right, None, Inherit) -> La propiedad CSS float ubica un elemento al lado izquierdo o derecho de su contenedor, 
+					permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del flujo		
+					normal de la página, aunque aún sigue siendo parte del flujo.
+
+PSEUDO ELEMENTOS -> los creamos sobre un elemento
+////////////////
+ PSEUDO-ELEMENTOS -> es un elemento que no forma parte del DOM al igual que outline; -> en inline no funcionan
+	::first-line	|	BOCK -> mantiene las propiedades de la primera linea de elementos sin modificarse ante cualquer cambio de responsign
+	::first-letter	|	BLOCK -> mantiene las propiedadesde la prmera letra sin ser modificada ante el responsign
+
+	::placeholder ---------------> me permite agregarle estilo y cambiar las propiedades del placeholder
+	::selection -----------------> me permite agregarle estilo al color de de letra y fondo al seleccionar con el mouse
+
+	::after		|	HIJOS - CONTENT (NECE SARIO) - INLINE -> (despues) Son hijos de los elementos al que se le aplica sin formar parte del DOM
+				Ejemplo: b-> elemento creado en html ejemplo -> <b> texto html </b>
+					b::after{
+    					content: "este es un texto desde css";
+					}
+				-------> http: -> web -> texto html este es un texto desde css
+
+	::before	|	HIJOS - CONTENT (NECESARIO) - INLINE -> (antes) Son hijos de los elementos al que se le aplica sin formar parte del DOM
+				Ejemplo: b-> elemento creado en html ejemplo -> <b> texto html </b>
+					b::before{
+    					content: "este es un texto desde css";
+					}
+				-------> http: -> web ->  este es un texto desde css texto html
+PSEUDO CLASSES -> escuchan un evento
+//////////////
+ PSEUDO-CLASSES -> Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado
+	:hover		-> escucha el evento cuando el mouse esta posicionado sobre el elemento
+	:link	  	-> cambiar las propiedades de un link que aun no se a accedido -> luego quedan marcadas
+	:visited	-> se marcan una vez que accedes
+	:active		-> cambia los estilos al mantener precionado el elemento
+	:focus		-> se aplican a los imput -> cambian los estilos al mantener precionado el elemento
+	:lang		-> lang es una funcion -> cambian las propiedades cuando esta seleccionado la etiqueta lang(aqui va la abreviacion del idioma)
+				usa la seleccion por atributo
+OBJECT-FIT -> propiedad aplicada a imagenes
+ Object-Fit: "fit"
+	Container 	-> se ajusta la imagen a la caja sin perder la proporcion de la imagen dejando espacion dentro de la misma.
+	Cover		-> la imagen se ajusta al contenedor y corta los bordes de ser necesario.
+	None		-> actua como si fuera la imagen origina y elije un autoajustado usando las propiedad por defecto -> mantentra la 
+				resolucion original.
+	Scale-Down	-> se queda con el valor mas bajo entre -> container & none. 
+
+OBJECT-POSITION
+ Object-Position:
+	Left - Right - Top - Button
+	
+	medidas - > PX - EM - % -ETC
+
+ 
+CURSOR: -> nos permite cambiar el cursor
+ 	pointer
+	progress
+	copy 
+	row-resize
+	entre otros...
+	
+Colores: COLOR NAME
+	HEXADECIMAL	-> o pones  #fff, #ffff, #ffffff o #ffffffff -> por 3, 4, 6, 8 se trabajan -> EL 4 Y 6 se le agrega el alpha .
+	RGB		-> red, green, blue -> 000 a 255 = 000 -> nada de color, 255 -> todo de ese color. 
+	RGBA		-> alpha -> de 0 a 1.
+	HSL
+	HSLA	
+
+
+<--RESPOSINVE DESIGN--> MOBILE FIRST -> trabajar con distintas resoluciones
+////////////////////////////////////
+ Responsive Design - Mobile First
+ Mobile Firse -> crearlo especialmente para mobile y adaptarlo a las distinas resoluciones. Es un consepto diferente que al de Responsign Design.
+	Media Query:
+		 @media screen and (max-width: 800px){
+			}
+	
+
+
+FLEXBOX -> CAJA FLEXIBLE
+////// -> las mas importantes!)
+		/// -> ambas se comportan como block
+	- display: flex;
+	- display: grid;
+	
+	- display: inline-flex;
+	- display: inline-grid;
+	
+	FLEXBOX -> en flexbos cambiamos las direcciones dentro del main-axis y el cross-axis.
+			Todos los elementos dentro de la caja se convierten en flex-items pero sus elementos hijos no.
+ 	-display: flex;
+	
+ FLEXBOX
+	Contenedores y Contenido
+	Flex Container - Flex Item
+	Main Axis (Main-Start - Main-End)
+	Cross Axis (Cross-Start - Cross-End)
+
+	<--PROPIEDADES-->
+
+	propiedades del contenedor flex; -> se aplica al contenedor afectando a sus items;
+	///////////////////////////////
+	
+	- flex-direction: row - row-reverse - column - column-reverse; -> efecto espejo: este cambia la direccion de los ejes;
+	- flex-wrap: no-wrap - wrap - wrap-reverse; -> Mueve las caja abajo, deja de ser flexible. 
+	- flex-flow: flex-direction flex-wrap; -> convina el direction y el wrap; -> podes usar esta propiedad para no usar las 2;
+	- justify-content: center, space-arround, space-between, space-evenly (main axis (width)); -> centra los elementos con propiedades diferentes;
+				-> center: centra el cotenido;
+				-> space-arround: deja el mayor espacio entre las cajas; -> no toma en cuenta los margenes del principio y fin;
+				-> space-between: da  un margen automatico entre las cajas;
+				-> space-evenly: nos da un margen especifico para que cada una tenga un espacio  por igual;
+	- align-items: flex-start, center, flex-end, strech, baseline (cross-axis (height));
+				-> baseline: se estira a lo largo del cross-axis si no contiene un height;			
+	- align-content: (............................................................................)
+				-> usa propedades de alig-item pero este funciona como contenido para ajustarlo segun al tamaño del viewport.
+				-> funciona para + de una linea;
+ <--PROPIEDADES DE LOS ITEM-->
+ <--propiedades reservadas-->
+ align-selft (Cross-Axis) -> alineacion en el Cross-Axis
+ <-- FUNCIONAMIENTO DEL MARGIN-->
+/////////////////////////////////
+
+	- margin -(directon): auto -> margin = contenedor - tamaño de la caja en el eje en el que corre (direction);
+
+	- felx-grow: (Espacio asignado + sobrante / grows) (Main-Axis);
+	- flex-shrink: Espacio que "cede" (Main Axis) -> este le permitira a las demas ajustarce;
+	- flex-basis: Medicion antes de encogerse (En auto (defect value), agarra el width, y sino tiene mas prioridad) (Main Axis);
+			-> es como el width pero mas importante, por ende si usamos las dos propiedades tomara al basis como principal;
+	- flex: flex-grow, flex-shrink, flex-basis; (al menos el primer parametro obligatprio) -> es un shorgan -> puedes abreviaar;
+	- order: (Como el z-index, pero en el eje en el que apunta el Main Axis);
+
+
+
+ <--GRID-->
+	<---------------------CONCEPTOS BASICOS ------------------------>
+	- grid container 	-> el bloque de la grilla
+	- grid item		  	
+	- grid cell
+	- grid tracks (column line y row line)
+	- grid area
+	- grid line (column line y row line)
+
+	<---------------------PROPIEDADES------------------------------->
+ 
+	- grid-template-rows (grid-container)
+	- grid-template-column (grid-container)
+		
+		-> unidades "auto" y fr
+		-> repeate (cantidad, tamaño/s)
+		
+	- grid-row-gap (grid-container)
+	- grid-column-gap (grid-container)
+	- grid-gap: row colum (grid-container)
+
+	- grid-row-start (grid-item)
+	- grid-row-end (grid-item)
+	- grid-column-start (grid-item)
+	- grid-column-end (grid-item)
+	- grid-row (grid-item) 	-> ej 1 /2 -> shorgan  o ej 1 / span 2
+	- grid-column (grid-item) 	-> ej 1 / 3 -> shorgan o ej 2 / span 3
+
+	<----------------------GRID IMPLICITO Y EXPLICITO-------------------->
+	
+	3 nuevas propiedades del grid implicito
+	- grid-auto-rows (igual que el template)
+	- grid-auto-columns (igual que eltemplate)
+	- grid-auto-flow: row (Defaul), column y dense
+
+	<-----------------------GRID DINAMICO------------------------------>
+	////////////////////////////////////////////////////////////////////
+	
+	- minmax()		-> son valores del repeate
+	- mincontent		-> son valores del repeate
+	- max-content		-> son valores del repeate
+	
+	- cantidad:
+
+	- auto-fill		-> sigue generando filas
+	- auto-fit  		-> los escala
+
+	
+	<----------------------ALINEACION Y CONTROL D FLUJO--------------------*>
+	
+	DIFERENCIA CON FLEX:
+
+	_La alineacion es dentro de cada celda y no alineacion total del flex contaier
+
+	_cada celda seria un "flex container"
+
+	(propiedades de grid-container)
+
+	- justify-items (horizontalmente) 
+	- align-items (verticalmente)
+
+	- strech (defaul) - start - center - end
+	- place-items: align-items justify-items
+
+	<---------------alineacion de filas y columnas--------------->
+
+	- justify-content (horizontalmente)
+	- alignt-content (verticalmente)
+	- strech (default) - start - center - end
+		mas las de flex: 
+				*space-arround
+				*space-between
+				*space-evenly
+
+	<----------------APLICADO AL GRID ITEM------------------->
+
+	- align-self
+	- justify-self
+
+	- place-self: align-self justify-self
+	
+	- order (igual que en flex) -> z indes en el orden que apunte el cross-Axis
+
+	<----------------AREAS EN GRID------------------------>
+
+	__AL GRID CONTAINER__
+	
+	grid-area: "nombre del area"  
+
+	<----------------SHORTHAND------------------------->
+	
+	- grid-template: row / column (grid-container)
+	- grid-template: area unidad
+
+
+ RESPOSIVE DESIGN
+
+
+
