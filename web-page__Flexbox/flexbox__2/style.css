@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+   
+}
+
+.flex__content{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    background: #110;
+    padding: 20px;;
+}
+
+form{
+    min-width: 200px;
+    min-height: 200px;
+    background:#eee;
+    border-radius: 20px;
+}
+
+.flex-img{
+    display: flex;
+    min-width: 200px;
+    justify-content: center;
+   
+}
+
+
+
+/*input*/
+.input-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}

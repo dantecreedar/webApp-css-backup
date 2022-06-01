@@ -1,0 +1,18 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.flex__content{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(255, 115, 115);
+
+}
+
+.items{
+    width: 100px;
+    height: 100px;
+    background: #bbb;
+}

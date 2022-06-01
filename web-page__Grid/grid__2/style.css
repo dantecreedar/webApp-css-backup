@@ -1,0 +1,9 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle, #fff, #bbb);   
+}
+

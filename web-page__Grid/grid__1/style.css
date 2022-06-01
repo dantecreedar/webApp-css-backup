@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: radial-gradient(circle, #fff, #bbb)
+}
+.grid-container{
+    display: grid;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: repeat(3,150px);
+    border: 5px solid black;
+    grid-auto-rows: 150px;
+    min-width: 500px;
+    grid-auto-flow: de;
+    
+    
+}
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border: 1px solid #000;
+   
+}
+.grid-item:first-child{
+    background-image: linear-gradient(to left top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    grid-column: 1 / 3; 
+    grid-row: 1 / 3;
+}
